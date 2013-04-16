@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="dimen_in_dp">100.0dp</dimen>
+    <dimen name="dimen_in_inches">0.625in</dimen>
+    <dimen name="dimen_in_mm">15.875mm</dimen>
+    <dimen name="dimen_in_pt">45.0pt</dimen>
+    <dimen name="detail_text_size">10sp</dimen>
+    <dimen name="detail_text_margin">3dp</dimen>
+
+</resources>
