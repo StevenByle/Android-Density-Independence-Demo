@@ -28,7 +28,8 @@ public class MainActivity extends Activity {
 		// Get data about the device's display
 		DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
 		float densityPxPerDp = displayMetrics.density;
-		float densityBucketDpi = 160 * densityPxPerDp;
+		float densityPxPerSp = displayMetrics.scaledDensity;
+		float densityBucketDpi = displayMetrics.densityDpi;
 		float xdpi = displayMetrics.xdpi;
 		float ydpi = displayMetrics.ydpi;
 
@@ -65,7 +66,8 @@ public class MainActivity extends Activity {
 		// Display info about the device's screen density
 		densityInfoText.setText("xdpi: " + xdpi + " | ydpi: " + ydpi
 				+ "\nDensity Bucket: " + densityBucketDpi + "dpi"
-				+ "\nDensity Scaler: " + densityPxPerDp + "px/dp");
+				+ "\nDensity Scaler: " + densityPxPerDp + "px/dp"
+				+ "\nDensity Font Scaler: " + densityPxPerSp + "px/sp");
 
 		// Wrap content
 		image1Text.setText("Resource size: " + imageWidthInPixels + "px x "  + imageHeightInPixels + "px"
