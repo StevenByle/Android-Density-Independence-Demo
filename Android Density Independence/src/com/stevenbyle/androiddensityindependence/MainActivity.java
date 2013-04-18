@@ -47,9 +47,12 @@ public class MainActivity extends Activity {
 		DecimalFormat df = new DecimalFormat("#.#");
 		String xdpiFormatted = df.format(xdpi);
 		String ydpiFormatted = df.format(ydpi);
+		String numDpFormatted = df.format(numDp);
 		String numInFormatted = df.format(numIn);
 		String numMmFormatted = df.format(numMm);
 		String numPtFormatted = df.format(numPt);
+		String mmPerInchFormatted = df.format(MM_PER_INCH);
+		String ptPerInchFormatted = df.format(PT_PER_INCH);
 
 		// Get references to all the views we need
 		TextView densityInfoText = (TextView) findViewById(R.id.text_density_info);
@@ -66,38 +69,28 @@ public class MainActivity extends Activity {
 
 		// Wrap content
 		image1Text.setText("Resource size: " + imageWidthInPixels + "px x "  + imageHeightInPixels + "px"
-				+ "\n\nWidth: wrap_content"
-				+ "\nHeight: wrap_content"
-				+ "\n\nWidth: " + imageWidthInPixels + "px"
-				+ "\nHeight: " + imageHeightInPixels + "px");
+				+ "\n\nWidth: wrap_content = " + imageWidthInPixels + "px"
+				+ "\nHeight: wrap_content = " + imageHeightInPixels + "px");
 
 		// Density independent pixels
 		image2Text.setText(imageWidthInPixels + "px / " + densityPxPerDp + "px/dp = " + df.format(imageWidthInPixels / densityPxPerDp) + "dp"
-				+ "\n\nWidth: " + numDp + "dp"
-				+ "\nHeight: " + numDp + "dp"
-				+ "\n\nWidth: " + numDp + "dp x " + densityPxPerDp + "px/dp = " + numDp * densityPxPerDp  + "px"
-				+ "\nHeight: " + numDp + "dp x " + densityPxPerDp + "px/dp = " + numDp * densityPxPerDp  + "px");
+				+ "\n\nWidth: " + numDpFormatted + "dp x " + densityPxPerDp + "px/dp = " + numDp * densityPxPerDp  + "px"
+				+ "\nHeight: " + numDpFormatted + "dp x " + densityPxPerDp + "px/dp = " + numDp * densityPxPerDp  + "px");
 
 		// Inches
 		image3Text.setText(imageWidthInPixels + "px / " + densityBucketDpi + "dpi = " + imageWidthInPixels / densityBucketDpi + "in"
-				+ "\n\nWidth: " + numIn + "in"
-				+ "\nHeight: " + numIn + "in"
 				+ "\n\nWidth: " + numInFormatted + "in x " + xdpiFormatted + "xdpi = " + df.format(xdpi * numIn)  + "px"
 				+ "\nHeight: " + numInFormatted + "in x " + ydpiFormatted + "ydpi = " + df.format(ydpi * numIn)  + "px");
 
 		// Millimeters
-		image4Text.setText(imageWidthInPixels + "px / " + densityBucketDpi + "dpi x " + MM_PER_INCH + "mm/in = " + imageWidthInPixels / densityBucketDpi * MM_PER_INCH + "mm"
-				+ "\n\nWidth: " + numMm + "mm"
-				+ "\nHeight: " + numMm + "mm"
-				+ "\n\nWidth: " + numMmFormatted + "mm / " + MM_PER_INCH + "mm/in x " + xdpiFormatted + "xdpi = " + df.format(xdpi * numMm / MM_PER_INCH)  + "px"
-				+ "\nHeight: " + numMmFormatted + "mm / " + MM_PER_INCH + "mm/in x " + ydpiFormatted + "ydpi = " + df.format(ydpi * numMm / MM_PER_INCH)  + "px");
+		image4Text.setText(imageWidthInPixels + "px / " + densityBucketDpi + "dpi x " + mmPerInchFormatted + "mm/in = " + imageWidthInPixels / densityBucketDpi * MM_PER_INCH + "mm"
+				+ "\n\nWidth: " + numMmFormatted + "mm / " + mmPerInchFormatted + "mm/in x " + xdpiFormatted + "xdpi = " + df.format(xdpi * numMm / MM_PER_INCH)  + "px"
+				+ "\nHeight: " + numMmFormatted + "mm / " + mmPerInchFormatted + "mm/in x " + ydpiFormatted + "ydpi = " + df.format(ydpi * numMm / MM_PER_INCH)  + "px");
 
 		// Points
-		image5Text.setText(imageWidthInPixels + "px / " + densityBucketDpi + "dpi x " + PT_PER_INCH + "pt/in = " + imageWidthInPixels / densityBucketDpi * PT_PER_INCH + "pt"
-				+ "\n\nWidth: " + numPt + "pt"
-				+ "\nHeight: " + numPt + "pt"
-				+ "\n\nWidth: " + numPtFormatted + "pt / " + PT_PER_INCH + "pt/in x " + xdpiFormatted + "xdpi = " + df.format(xdpi * numPt / PT_PER_INCH)  + "px"
-				+ "\nHeight: " + numPtFormatted + "pt / " + PT_PER_INCH + "pt/in x " + ydpiFormatted + "ydpi = " + df.format(ydpi * numPt / PT_PER_INCH)  + "px");
+		image5Text.setText(imageWidthInPixels + "px / " + densityBucketDpi + "dpi x " + ptPerInchFormatted + "pt/in = " + imageWidthInPixels / densityBucketDpi * PT_PER_INCH + "pt"
+				+ "\n\nWidth: " + numPtFormatted + "pt / " + ptPerInchFormatted + "pt/in x " + xdpiFormatted + "xdpi = " + df.format(xdpi * numPt / PT_PER_INCH)  + "px"
+				+ "\nHeight: " + numPtFormatted + "pt / " + ptPerInchFormatted + "pt/in x " + ydpiFormatted + "ydpi = " + df.format(ydpi * numPt / PT_PER_INCH)  + "px");
 	}
 
 	/**

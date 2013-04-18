@@ -5,7 +5,8 @@
     <dimen name="dimen_in_inches">0.625in</dimen>
     <dimen name="dimen_in_mm">15.875mm</dimen>
     <dimen name="dimen_in_pt">45.0pt</dimen>
+    <dimen name="title_text_size">12sp</dimen>
     <dimen name="detail_text_size">10sp</dimen>
-    <dimen name="detail_text_margin">3dp</dimen>
+    <dimen name="detail_text_margin">2dp</dimen>
 
 </resources>
