@@ -1,6 +1,8 @@
 package com.stevenbyle.androiddensityindependence;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
@@ -45,7 +47,9 @@ public class MainActivity extends Activity {
 		double numPt = extractDouble(getResources().getString(R.dimen.dimen_in_pt));
 
 		// Setup formatted text for display
-		DecimalFormat df = new DecimalFormat("#.#");
+		DecimalFormat df = (DecimalFormat) NumberFormat.getInstance(Locale.US);
+		df.applyLocalizedPattern("#.#");
+
 		String xdpiFormatted = df.format(xdpi);
 		String ydpiFormatted = df.format(ydpi);
 		String numDpFormatted = df.format(numDp);
