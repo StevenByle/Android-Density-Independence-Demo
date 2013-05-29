@@ -1,7 +1,7 @@
 Density Independence Example
 =====
 
-A simple example Android application to demonstrate how the different layout dimension units compare on different density devices. This is a code example for my blog, [Understanding Density Independence in Android](http://blogs.captechconsulting.com/blog/steven-byle/understanding-density-independence-android), which explains the topic of density independence more in depth, and refers to this project.
+A simple Android application to demonstrate how the different layout dimension units compare on different density devices. This is a code demo for my blog, [Understanding Density Independence in Android](http://blogs.captechconsulting.com/blog/steven-byle/understanding-density-independence-android), which explains the topic of density independence more in depth, and refers to this project.
 
 License
 -------
