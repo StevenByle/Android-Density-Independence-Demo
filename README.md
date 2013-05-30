@@ -3,7 +3,9 @@ Density Independence Demo
 
 A simple Android application to demonstrate how the different layout dimension units compare on different density devices. This is a code demo created with my blog post, [Understanding Density Independence in Android](http://blogs.captechconsulting.com/blog/steven-byle/understanding-density-independence-android), which explains the topic of density independence in depth, and refers to this project.
 
-<img src="Screenshots/framed_Galaxy Nexus.png" width=700/>
+<p align="center">
+  <img src="Screenshots/framed_Galaxy Nexus.png" width=700/>
+</p>
 
 License
 -------
