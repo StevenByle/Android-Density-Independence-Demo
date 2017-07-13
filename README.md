@@ -1,4 +1,4 @@
-#Understanding Density Independence in Android
+# Understanding Density Independence in Android
 
 <p align="center">
   <img src="Screenshots/framed_Galaxy%20Nexus.png" width=600/>
@@ -70,7 +70,7 @@
 
 <h2>Dimension Unit Best Practices</h2><p><strong>px</strong>&nbsp;- Does not keep density independence. Should never be needed.</p><p><strong>in/mm/pt</strong>&nbsp;- Keeps density independence, but computes to exact amounts of pixels which can hurt performance, and cause image artifacts and aliasing. Necessary if precise sizing is required, and any deviation is unacceptable. Also useful to set distances between elements, when exact distances are needed.</p><p><strong>dp</strong>&nbsp;- Keeps density independence and best image quality, but at the cost of small deviations in physical size. Since it computes using density bucket scaling, it provides proportionally accurate sizing with image resources. This is the recommended dimension unit to use for setting bounds on elements or distances in between them.</p><p><strong>sp</strong>&nbsp;- Keeps density independence, and font quality, but at the cost of small deviations in physical size. This is the recommended dimension unit to use for font sizing only, as it takes density and the user’s text size preference into account.</p><h2>Summary</h2><p>To recap, the keys to keeping density independence:</p><ul><li>Decide the required physical rendered size needed for each image asset.</li><li>Design vector graphic image assets, or raw image assets larger than the size needed for the maximum density bucket.</li><li>Create density specific versions of every image asset for each density bucket, and place them into the proper “drawable” resource folder using identifiers.</li><li>When setting bounds for images, use <code>wrap_content</code> for best display, <code>match_parent</code> to fill the display, or <code>dp</code> for a fixed size.</li><li>When setting distances in layouts, use <code>dp</code> for best display. Only use <code>in</code>, <code>mm</code>, or <code>pt</code> if a precise size is required. There should never be a use for <code>px</code>.</li></ul><p>With an understanding of how Android handles displaying user interfaces on different density screens, it becomes much easier to design and develop applications optimized for any density display.</p>
 
-##License
+## License
 
     Copyright 2013 Steven Byle
     
